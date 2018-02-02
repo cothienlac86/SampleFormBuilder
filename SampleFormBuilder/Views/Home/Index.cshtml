@@ -1,0 +1,7 @@
+﻿@using FormFactory.AspMvc
+@model SampleFormBuilder.Models.RegisterModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@FormFactory.FF.GetPropertyVmsUsingReflection(Model, Model.GetType()).Render(Html)
